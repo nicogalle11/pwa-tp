@@ -2,7 +2,7 @@
 
 const API_KEY_OWM = `abb590df5b1833e471a01284df47322b`;
 const API_KEY_GOOGLE = `AIzaSyA4DyXA5XMhS9bfS33RbPHcLcR6xAPIXN8`;
-const URL = `http://api.openweathermap.org/data/2.5/`;
+const URL = `https://api.openweathermap.org/data/2.5/`;
 const d = document;
 const main = d.getElementById(`main`);
 const button = d.getElementById(`button`);
@@ -27,7 +27,7 @@ function searchCity(city, unit) {
 		})
 		.then(function(data) {
 			if (city == `Buenos Aires`) {
-				favicon.href = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+				favicon.href = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 			}
 
 			if (data.cod == `404`) {
@@ -135,7 +135,7 @@ function mostrarDatos(data) {
 	//AGREGANDO ESTILOS AL HTML
 
 	datos.style.background = paleta;
-	titulo.style.background = `url(http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png) no-repeat`;
+	titulo.style.background = `url(https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png) no-repeat`;
 	titulo.style.backgroundPosition = `bottom`;
 	footer.style.background = paleta;
 }
