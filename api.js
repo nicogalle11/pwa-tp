@@ -12,7 +12,6 @@ const footer = d.querySelector(`footer`);
 let storage = "";
 const favicon = d.querySelector(`link[rel~="icon"]`);
 
-preSet();
 cargarLocalStorage();
 
 button.addEventListener(`click`, () => {
@@ -26,10 +25,6 @@ function searchCity(city, unit) {
 				return res.json();			
 		})
 		.then(function(data) {
-			if (city == `Buenos Aires`) {
-				favicon.href = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-			}
-
 			if (data.cod == `404`) {
 				cityNotFound();
 			} else {
@@ -174,10 +169,4 @@ function cityNotFound() {
 	error_m2.innerHTML = `No se encontró la ciudad que estás buscando, revisa que esté bien escrita o prueba con otra. Recordamos que, por el momento, la búsqueda está limitada a ciudades ubicadas en el Planeta Tierra. Muchas gracias.`;
 
 	footer.style.background = `linear-gradient(45deg,rgba(255,71,71,0.8),rgba(0,0,0,0.8))`
-}
-
-function preSet() {
-	city = `Buenos Aires`;
-	unit = `metric`;
-	searchCity(city, unit)
 }
