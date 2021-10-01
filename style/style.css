@@ -1,0 +1,117 @@
+/*
+https://coolors.co/ffffff-5cd1ff-47ff47-ffff5c-ffad5c-ff4747
+*/
+
+@font-face {
+	font-family: 'gotham';
+	src: url('../fonts/Gotham.eot');
+	src: url('../fonts/Gotham.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Gotham.ttf') format('truetype'),
+		 url('../fonts/Gotham.woff') format('woff'),
+		 url('../fonts/Gotham.woff2') format('woff2');
+}
+
+* {
+	font-family: gotham;
+}
+
+header {
+	background: url(../img/header.png) no-repeat;
+	background-size: cover;
+	padding-bottom: 1.5em;
+}
+
+header h1 {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.9);
+	font-size: 2em;
+	margin-top: 1em !important;
+}
+
+header p {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+header select {
+	border: solid 1px #5CD1FF;
+	border-radius: 0.5em;
+}
+
+header div input {
+	border: solid 1px #5CD1FF;
+	border-radius: 0.5em;
+	width: calc(100% - 40px);
+}
+
+header div button {
+	border: solid 1px #5CD1FF;
+	border-radius: 100%;
+	background: url('../img/buscar.png') #5CD1FF;
+	width: 28px !important;
+	height: 28px;
+	font-size: 0;
+	vertical-align: top;
+}
+
+main {
+	background: url('../img/fondo.png');
+	background-size: cover;
+	background-position: center;
+	min-height: calc(100vh - 314px);
+}
+
+main h2 {
+	font-size: 3em;
+	background-position: bottom;
+	height: 5em;
+}
+
+main section:first-child p {
+	font-size: 6em;
+	line-height: 1em;
+}
+
+main section:last-child {
+	border: solid 1px #000000;
+}
+
+main section:last-child p span {
+	font-weight: bold;
+}
+
+main iframe {
+	border: none;
+	height: 15em;
+}
+
+@media screen and (min-width: 576px) {
+	main iframe {
+		height: 20em;
+	}
+}
+
+footer {
+	padding: 1em 0;
+	background: ;
+}
+
+footer ul {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.error {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+#error_m1 {
+	font-size: 5em;
+}
+
+#error_m2 {
+	max-width: 42em;
+	margin: auto;
+}
+
